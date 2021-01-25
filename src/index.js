@@ -1,17 +1,72 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import faker from "faker";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import ReactDOM from "react-dom";
+import ApprovalCard from "./ApprovalCard";
+import CommentDetail from "./CommentDetail";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (
+    <div className="ui container comments">
+      <ApprovalCard>
+        <CommentDetail
+          author="Miky"
+          time="Today at 04:05 PM"
+          text="Sa7 aweeeee"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Mego"
+          time="Today at 04:10 PM"
+          text="hahhahaaha aywa bgd ya ziko lazem ne8iar el community"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>{" "}
+      <ApprovalCard>
+        <CommentDetail
+          author="Marina"
+          time="Today at 04:15 PM"
+          text="hahahha la ana HR we momken arfedak"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Miky"
+          time="Today at 04:05 PM"
+          text="Sa7 aweeeee"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Koky"
+          time="Today at 04:20 PM"
+          text="hhhahaha aywa ya sedkyyyyyyy"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Martina"
+          time="Today at 04:22 PM"
+          text="hahahhahha wa7ashtonyyyy ya 3eyaaal"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Ziko"
+          time="Today at 04:00 PM"
+          text="ظظ"
+          imageSrc={faker.image.image()}
+        />
+      </ApprovalCard>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector("#root"));
+//src="https://source.unsplash.com/random"
